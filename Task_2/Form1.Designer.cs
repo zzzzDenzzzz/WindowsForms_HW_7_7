@@ -29,75 +29,99 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listView1 = new System.Windows.Forms.ListView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.listView = new System.Windows.Forms.ListView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_tile = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_list = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_table = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_icons = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_content = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // listView
             // 
-            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(776, 426);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listView.ContextMenuStrip = this.contextMenuStrip1;
+            this.listView.HideSelection = false;
+            this.listView.Location = new System.Drawing.Point(12, 12);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(776, 426);
+            this.listView.TabIndex = 0;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Tile;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5});
+            this.toolStripMenuItem_tile,
+            this.toolStripMenuItem_list,
+            this.toolStripMenuItem_table,
+            this.toolStripMenuItem_icons,
+            this.toolStripMenuItem_content});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 114);
             this.contextMenuStrip1.Text = "Вид";
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItem_tile
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
-            this.toolStripMenuItem1.Text = "Плитка";
+            this.toolStripMenuItem_tile.Name = "toolStripMenuItem_tile";
+            this.toolStripMenuItem_tile.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_tile.Text = "Плитка";
+            this.toolStripMenuItem_tile.Click += new System.EventHandler(this.toolStripMenuItem_tile_Click);
             // 
-            // toolStripMenuItem2
+            // toolStripMenuItem_list
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(111, 22);
-            this.toolStripMenuItem2.Text = "Список";
+            this.toolStripMenuItem_list.Name = "toolStripMenuItem_list";
+            this.toolStripMenuItem_list.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_list.Text = "Список";
+            this.toolStripMenuItem_list.Click += new System.EventHandler(this.toolStripMenuItem_list_Click);
             // 
-            // toolStripMenuItem3
+            // toolStripMenuItem_table
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(138, 22);
-            this.toolStripMenuItem3.Text = "Таблица";
+            this.toolStripMenuItem_table.Name = "toolStripMenuItem_table";
+            this.toolStripMenuItem_table.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_table.Text = "Таблица";
+            this.toolStripMenuItem_table.Click += new System.EventHandler(this.toolStripMenuItem_table_Click);
             // 
-            // toolStripMenuItem4
+            // toolStripMenuItem_icons
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(138, 22);
-            this.toolStripMenuItem4.Text = "Иконки";
+            this.toolStripMenuItem_icons.Name = "toolStripMenuItem_icons";
+            this.toolStripMenuItem_icons.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_icons.Text = "Иконки";
+            this.toolStripMenuItem_icons.Click += new System.EventHandler(this.toolStripMenuItem_icons_Click);
             // 
-            // toolStripMenuItem5
+            // toolStripMenuItem_content
             // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(138, 22);
-            this.toolStripMenuItem5.Text = "Содержимое";
+            this.toolStripMenuItem_content.Name = "toolStripMenuItem_content";
+            this.toolStripMenuItem_content.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_content.Text = "Содержимое";
+            this.toolStripMenuItem_content.Click += new System.EventHandler(this.toolStripMenuItem_content_Click);
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "Computer-Hardware-Notebook-icon.png");
+            this.imageList.Images.SetKeyName(1, "FauxS-XP (Cobalt) V1.5 Icon 04.ico");
+            this.imageList.Images.SetKeyName(2, "FauxS-XP (Cobalt) V1.5 Icon 25.ico");
+            this.imageList.Images.SetKeyName(3, "FauxS-XP (Cobalt) V1.5 Icon 28.ico");
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 200;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listView);
             this.Name = "Form1";
             this.Text = "Form1";
             this.contextMenuStrip1.ResumeLayout(false);
@@ -106,13 +130,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_tile;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_list;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_table;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_icons;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_content;
+        private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 
